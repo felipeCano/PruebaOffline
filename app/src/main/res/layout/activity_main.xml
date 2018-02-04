@@ -56,10 +56,18 @@
         android:hint="address" />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargar Datos"
+        android:onClick="loadPerson"
+        android:background="@color/colorPrimary"/>
+
+    <Button
         android:id="@+id/buttonSaveOffline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="220dp"
+        android:onClick="SavePerson"
         android:background="@color/colorPrimary"
         android:text="Guardar Registro" />
 

@@ -63,14 +63,13 @@ public class DataOffline extends SQLiteOpenHelper {
     }
 
 
-    public List<String> SearchPerson(String name, String id)
+    public List<String> Search()
     {
-        id = id.replace(" ","");
 
         List<String> arraylist = new ArrayList<String>();
         SQLiteDatabase sql=this.getReadableDatabase();
 
-        String query = "SELECT  *FROM " + BDPruebaOffline.TABLE_PRUEBAOFFLINE + " where "+ BDPruebaOffline.BD_Name +" = '"+name+"' AND "+ BDPruebaOffline.BD_ID+" = '"+ id+"'";
+        String query = "SELECT  *FROM " + BDPruebaOffline.TABLE_PRUEBAOFFLINE;
         System.out.println("el anexo es  Buscado " + query);
         //String query = "SELECT  *FROM clientes where user_ID_users = 2345";
         Cursor c = sql.rawQuery(query, null);
